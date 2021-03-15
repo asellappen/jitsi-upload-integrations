@@ -1,0 +1,25 @@
+# ----------------------------------------------------------------------------
+#
+# Package             : jitsi-upload-integrations
+# Source Repo         : https://github.com/jitsi/jitsi-upload-integrations
+# Travis Job Link     : https://travis-ci.com/github/asellappen/jitsi-upload-integrations/
+# Created travis.yml  : Yes
+# Maintainer          : Arumugam N S <asellappen@yahoo.com>/Priya Seth<sethp@us.ibm.com>
+#
+# Script License      : Apache License, Version 2 or later
+#
+# ----------------------------------------------------------------------------
+
+language: generic
+sudo: false
+arch:
+  - amd64
+  - ppc64le
+  
+scripts :
+ - bash resources/jenkins/build.sh
+ - debian/jitsi-upload-integrations.install
+ - cd dropbox
+ - bash testUnit.sh
+ 
+ Access token: sl.AsSwdTMGVdxYi170bJlG6tJzY_JP3c0jNrCfzkA_iP9EAwKa41OYiOs4eJxPzhxLNEmK-1vmVNhfDoclwfa_lVFx5t08M7ow7PEHzwL6l43a9kS3EzA58NjW4IgNu8XVqGmSMC8
